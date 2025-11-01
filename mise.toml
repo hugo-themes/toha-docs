@@ -7,6 +7,15 @@ go = 'latest'
 description = "Install dependencies"
 run = ["hugo mod tidy", "hugo mod npm pack", "npm install"]
 
+[tasks.clean]
+description = "Cleanup cached data"
+run = "rm -rf public hugo_build.lock resources/_gen && mkdir -p public"
+
+[tasks.build]
+description = "Build Hugo site"
+depends = ["install", "clean"]
+run = "hugo --gc --minify ${args}"
+
 [tasks.server]
 description = "Run hugo server"
 depends = "install"

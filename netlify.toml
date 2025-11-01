@@ -1,5 +1,5 @@
 [build]
-command = "mise install && mise run install && hugo --gc --minify"
+command = "mise install && mise run build"
 publish = "public"
 
 [build.environment]
@@ -10,8 +10,7 @@ HUGO_ENV = "production"
 
 
 [context.deploy-preview]
-command = "mise install && mise run install && hugo --gc --minify --buildFuture -b $DEPLOY_PRIME_URL"
+command = "mise install && mise run build --buildFuture -b $DEPLOY_PRIME_URL"
 
 [context.branch-deploy]
-command = "mise install && mise run install && hugo --gc --minify -b $DEPLOY_PRIME_URL"
-
+command = "mise install && mise run build -b $DEPLOY_PRIME_URL"
