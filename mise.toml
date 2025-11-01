@@ -9,7 +9,16 @@ run = ["hugo mod tidy", "hugo mod npm pack", "npm install"]
 
 [tasks.clean]
 description = "Cleanup cached data"
-run = "rm -rf public hugo_build.lock resources/_gen && install -d -m 0755 public"
+run = """
+  set -e
+  echo "Cleaning build artifacts..."
+  rm -rf public hugo_build.lock resources/_gen || true
+  sync
+  mkdir -p public
+  chmod 755 public
+  chown -R $(whoami):$(whoami) public || true
+  echo "Clean complete."
+"""
 
 [tasks.build]
 description = "Build Hugo site"

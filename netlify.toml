@@ -2,6 +2,9 @@
 command = "mise install && mise run build"
 publish = "public"
 
+[[build.cache]]
+path = "!public"
+
 [build.environment]
 HUGO_ENABLEGITINFO = "true"
 
