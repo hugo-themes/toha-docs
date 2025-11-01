@@ -14,7 +14,7 @@ run = "rm -rf public hugo_build.lock resources/_gen && mkdir -p public"
 [tasks.build]
 description = "Build Hugo site"
 depends = ["install", "clean"]
-run = "hugo --gc --minify ${args}"
+run = "hugo --gc --minify"
 
 [tasks.server]
 description = "Run hugo server"
