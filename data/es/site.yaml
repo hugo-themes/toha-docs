@@ -13,7 +13,7 @@ description: Página de ejemplo del tema de hugo Toha.
 # estarán separados de los menús principales
 customMenus:
 - name: Docs
-  url: https://toha-guides.netlify.app/posts/
+  url: https://toha-docs.netlify.app/posts/
   # especifica si quieres esconder el elemento de la barra de navegación o no.
   hideFromNavbar: false
   # especifica si quieres mostrar el elemento en el pie de página o no.
@@ -26,4 +26,4 @@ openGraph:
   type: website
   description: Portfolio and personal blog of John Doe.
   image: images/author/john.png
-  url: https://hugo-toha.github.io
+  url: https://toha-example-site.netlify.app

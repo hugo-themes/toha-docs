@@ -13,7 +13,7 @@ description: Portfolio and personal blog of John Doe.
 # they will be separated by a divider from the main menus.
 customMenus:
 - name: Docs
-  url: https://toha-guides.netlify.app/posts/
+  url: https://toha-docs.netlify.app/posts/
   # specify whether to hide the menu item from top navbar or not.
   hideFromNavbar: false
   # specify whether to show the menu item in footer or not.
@@ -26,4 +26,4 @@ openGraph:
   type: website
   description: Portfolio and personal blog of John Doe.
   image: images/author/john.png
-  url: https://hugo-toha.github.io
+  url: https://toha-example-site.netlify.app
