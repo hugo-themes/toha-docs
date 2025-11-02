@@ -8,7 +8,6 @@ HUGO_ENABLEGITINFO = "true"
 [context.production.environment]
 HUGO_ENV = "production"
 
-
 [context.deploy-preview]
 command = "mise install && mise run build --buildFuture -b $DEPLOY_PRIME_URL"
 
