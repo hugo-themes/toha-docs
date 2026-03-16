@@ -73,7 +73,7 @@ jobs:
 
       - name: Comment Broken Links
         if: ${{ steps.lychee.outputs.exit_code != 0 }}
-        uses: marocchino/sticky-pull-request-comment@v2
+        uses: marocchino/sticky-pull-request-comment@v3
         with:
           path: lychee/out.md
 
